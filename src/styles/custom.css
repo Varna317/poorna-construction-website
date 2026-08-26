@@ -1,0 +1,1030 @@
+/* ========================================================
+   REFINED COMPONENT STYLES & SUBTLE INTERACTIONS - POORNA ASSOCIATES
+   ======================================================== */
+
+/* --------------------------------------------------------
+   1. SCROLL REVEAL UTILITIES
+   -------------------------------------------------------- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+.reveal-delay-5 { transition-delay: 0.40s; }
+
+/* --------------------------------------------------------
+   2. NAVBAR
+   -------------------------------------------------------- */
+.poorna-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border-light);
+  transition: all var(--transition-fast);
+  padding: 0.65rem 0;
+  z-index: 1030;
+}
+
+.poorna-navbar.scrolled {
+  box-shadow: 0 2px 14px rgba(11, 37, 69, 0.06);
+  border-bottom-color: var(--color-border);
+  padding: 0.45rem 0;
+}
+
+.navbar-brand-logo {
+  height: 75px;
+  image-rendering: -webkit-optimize-contrast;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.navbar-brand:hover .navbar-brand-logo {
+  transform: scale(1.02);
+}
+
+@media (max-width: 576px) {
+  .navbar-brand-logo {
+    height: 55px;
+  }
+}
+
+.nav-link-poorna {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--color-text-main) !important;
+  padding: 0.45rem 0.85rem !important;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link-poorna:hover {
+  color: var(--color-primary) !important;
+}
+
+.nav-link-poorna::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background-color: var(--color-red);
+  transition: all 0.25s ease;
+  opacity: 0;
+}
+
+.nav-link-poorna:hover::after {
+  left: 0.85rem;
+  right: 0.85rem;
+  opacity: 0.6;
+}
+
+.nav-link-poorna.text-muted {
+  color: var(--text-dark-body) !important; /* upgraded for better contrast */
+}
+
+.nav-link-poorna.active {
+  color: var(--color-primary) !important;
+  font-weight: 600;
+}
+
+.nav-link-poorna.active::after {
+  left: 0.85rem;
+  right: 0.85rem;
+  opacity: 1;
+}
+
+/* Header Phone Block */
+.header-phone-block {
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.header-phone-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.header-phone-block:hover .header-phone-icon {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.header-phone-label {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-dark-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.header-phone-numbers {
+  font-family: var(--font-body);
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-dark-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.header-phone-link {
+  color: var(--text-dark-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.header-phone-link:hover {
+  color: var(--color-red);
+}
+
+.header-phone-divider {
+  color: var(--text-dark-muted);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------
+   3. HERO SECTION & ENTRANCE ANIMATION
+   -------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  background-color: var(--color-dark);
+  color: #ffffff;
+  padding: 4.5rem 0 4rem 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 85% 15%, rgba(201, 37, 44, 0.08) 0%, transparent 35%),
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  pointer-events: none;
+}
+
+/* Hero Staggered Entrance Keyframes */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim-1 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both; }
+.hero-section .hero-anim-1 span:not(.badge) {
+  color: #FFFFFF !important;
+}
+.hero-anim-2 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
+.hero-anim-3 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
+.hero-anim-4 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both; }
+.hero-anim-5 { animation: heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; }
+
+.hero-title {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.18;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-title .highlight-red {
+  color: var(--color-red);
+}
+
+.hero-tagline-main {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #f1f5f9;
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
+  margin-bottom: 0.85rem;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: #e2e8f0;
+  max-width: 580px;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+/* Hero Right Column: High-Contrast Dark Navy Architectural Card */
+.hero-engineering-card {
+  background-color: #0c1e33;
+  border: 1px solid #1a385c;
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-engineering-card:hover {
+  border-color: #264e7c;
+  transform: translateY(-3px);
+}
+
+.hero-metric-box {
+  padding: 1.15rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-metric-box:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-metric-title {
+  color: #ffffff !important;
+  font-size: 0.925rem;
+  font-weight: 600;
+}
+
+.hero-metric-desc {
+  color: #e2e8f0 !important;
+  font-size: 0.825rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* --------------------------------------------------------
+   4. TRUST STRIP
+   -------------------------------------------------------- */
+.trust-strip {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.25rem 0;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.trust-item:hover {
+  transform: translateY(-2px);
+}
+
+.trust-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.trust-item:hover .trust-icon-box {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.trust-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: 0.05rem;
+}
+
+.trust-subtitle {
+  font-size: 0.775rem;
+  color: var(--text-dark-body);
+  margin: 0;
+}
+
+/* --------------------------------------------------------
+   5. WHO WE ARE: REFINED HIGH-CONTRAST PANEL (Option A - Preferred)
+   -------------------------------------------------------- */
+.who-we-are-panel {
+  background-color: #0c1e33;
+  border: 1px solid #1a385c;
+  border-radius: var(--radius-md);
+  padding: 2.25rem;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.who-we-are-panel:hover {
+  transform: translateY(-3px);
+  border-color: #264e7c;
+}
+
+.who-feature-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 1.15rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  transition: background-color 0.25s ease;
+}
+
+.who-feature-box:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.who-feature-box .feature-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(201, 37, 44, 0.18);
+  color: #ff6b72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.who-feature-box strong {
+  color: #ffffff !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.who-feature-box span {
+  color: #f1f5f9 !important;
+  font-size: 0.825rem;
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------
+   6. SERVICE BOXES & WHY CHOOSE US
+   -------------------------------------------------------- */
+.service-box {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.08);
+}
+
+.service-box .icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.25s ease;
+}
+
+.service-box:hover .icon-wrapper {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.advantage-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  height: 100%;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.advantage-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.08);
+}
+
+.advantage-number {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-red);
+  margin-bottom: 0.35rem;
+}
+
+/* --------------------------------------------------------
+   7. PROJECT GALLERY & LIGHTBOX (NIRT Real Images ONLY)
+   -------------------------------------------------------- */
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  .project-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-img-wrapper {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-dark);
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.project-img-wrapper:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(11, 37, 69, 0.12);
+}
+
+.project-img-wrapper:hover .project-thumb-img {
+  transform: scale(1.04);
+}
+
+.project-img-overlay {
+  position: absolute;
+  inset: 0;
+  /* Always-visible dark gradient at the bottom for readability */
+  background: linear-gradient(to top, rgba(6, 16, 30, 0.92) 0%, rgba(6, 16, 30, 0.45) 40%, transparent 70%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.1rem;
+  /* Always visible at partial opacity; hover brings to full */
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.project-img-wrapper:hover .project-img-overlay {
+  opacity: 1;
+}
+
+.project-overlay-caption {
+  color: #ffffff;
+  font-size: 0.825rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0;
+  /* Text shadow for extra contrast against bright image areas */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+}
+
+/* "Click to Expand" label also needs shadow for visibility */
+.project-img-overlay .d-flex span {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+}
+
+/* Lightbox Modal */
+.poorna-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 14, 24, 0.95);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 1020px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img-container {
+  max-height: 75vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lightbox-caption-box {
+  margin-top: 0.85rem;
+  text-align: center;
+  color: #ffffff;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-btn-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-btn-close:hover {
+  background: var(--color-red);
+  color: #ffffff;
+  background: var(--color-red);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.lightbox-nav-btn:hover {
+  background: var(--color-primary-light);
+  border-color: #ffffff;
+}
+
+.lightbox-nav-prev { left: -54px; }
+.lightbox-nav-next { right: -54px; }
+
+@media (max-width: 991px) {
+  .lightbox-nav-prev { left: 8px; }
+  .lightbox-nav-next { right: 8px; }
+  .lightbox-btn-close { top: 8px; right: 8px; z-index: 20; }
+}
+
+/* --------------------------------------------------------
+   8. PROCESS TIMELINE & CARDS
+   -------------------------------------------------------- */
+.process-step-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  height: 100%;
+  position: relative;
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.process-step-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.08);
+}
+
+.process-step-number {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-red);
+  background: var(--color-red-subtle);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.25s ease;
+}
+
+.process-step-card:hover .process-step-number {
+  background-color: var(--color-red);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------
+   9. INTERACTIVE BUTTONS & ICONS
+   -------------------------------------------------------- */
+.btn-poorna-primary,
+.btn-poorna-red,
+.btn-poorna-outline,
+.btn-poorna-outline-light {
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-poorna-primary svg,
+.btn-poorna-red svg,
+.btn-poorna-outline svg,
+.btn-poorna-outline-light svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-poorna-primary:hover svg,
+.btn-poorna-red:hover svg,
+.btn-poorna-outline:hover svg,
+.btn-poorna-outline-light:hover svg {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------
+   10. MOBILE FIXED BOTTOM ACTION BAR
+   -------------------------------------------------------- */
+.mobile-action-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
+  padding: 0.5rem 0.75rem;
+  z-index: 1025;
+}
+
+@media (max-width: 991px) {
+  .mobile-action-bar {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.mobile-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.35rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+  border: none;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease;
+}
+
+.mobile-action-btn:active {
+  opacity: 0.85;
+}
+
+.mobile-action-call {
+  background-color: var(--color-primary);
+  color: #ffffff !important;
+}
+
+.mobile-action-whatsapp {
+  background-color: #25d366;
+  color: #ffffff !important;
+}
+
+.mobile-action-quote {
+  background-color: var(--color-red);
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------
+   11. FLOATING WHATSAPP BUTTON (Smooth hover, no annoying loop)
+   -------------------------------------------------------- */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  width: 52px;
+  height: 75px;
+  image-rendering: -webkit-optimize-contrast;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  z-index: 1020;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.floating-whatsapp-btn:hover {
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+@media (max-width: 991px) {
+  .floating-whatsapp-btn {
+    bottom: 4.8rem;
+    right: 1rem;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* --------------------------------------------------------
+   12. FOOTER STYLING
+   -------------------------------------------------------- */
+.poorna-footer {
+  background-color: var(--color-dark);
+  color: #e2e8f0;
+  border-top: 1px solid #16263b;
+  padding-top: 4rem;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--color-red);
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 0.55rem;
+}
+
+.footer-links-list a {
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.875rem;
+  color: #f1f5f9;
+}
+
+.footer-contact-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--color-red);
+}
+
+.footer-bottom {
+  border-top: 1px solid #152538;
+  padding: 1.25rem 0;
+  margin-top: 3rem;
+  font-size: 0.825rem;
+  color: #cbd5e1;
+}
+
+/* --------------------------------------------------------
+   13. ACCESSIBILITY / PREFERS-REDUCED-MOTION
+   -------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* --- UI Fixes for Dark Panels inside Light Backgrounds (High Specificity) --- */
+#root .bg-white .who-we-are-panel .text-white,
+#root .bg-white .who-we-are-panel h1,
+#root .bg-white .who-we-are-panel h2,
+#root .bg-white .who-we-are-panel h3,
+#root .bg-white .who-we-are-panel h4,
+#root .bg-white .who-we-are-panel h5,
+#root .bg-white .who-we-are-panel h6,
+#root .bg-white .who-we-are-panel strong,
+#root .bg-light-poorna .bg-dark-poorna .text-white,
+#root .bg-light-poorna .bg-dark-poorna h1,
+#root .bg-light-poorna .bg-dark-poorna h2,
+#root .bg-light-poorna .bg-dark-poorna h3,
+#root .bg-light-poorna .bg-dark-poorna h4,
+#root .bg-light-poorna .bg-dark-poorna h5,
+#root .bg-light-poorna .bg-dark-poorna h6 {
+  color: #ffffff !important;
+}
+
+#root .bg-white .who-we-are-panel .text-light,
+#root .bg-white .who-we-are-panel p,
+#root .bg-light-poorna .bg-dark-poorna .text-light,
+#root .bg-light-poorna .bg-dark-poorna p {
+  color: var(--text-light-body, #f1f5f9) !important;
+}
+
+/* Specific fix for spans in features */
+.who-feature-box span {
+  color: #f1f5f9 !important;
+}
+
+
+/* --- Photo Captions High Contrast Fix --- */
+#root .project-img-overlay .text-white,
+#root .project-img-overlay .text-white *,
+#root .project-img-overlay p.project-overlay-caption {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+
+/* --- Lightbox Modal Enhancements --- */
+.poorna-lightbox-backdrop {
+  align-items: flex-start !important;
+  overflow-y: auto !important;
+}
+
+.lightbox-content {
+  margin: auto !important;
+  max-height: none !important;
+  padding: 2rem 0 !important;
+}
+
+.lightbox-img-container {
+  max-height: none !important;
+}
+
+.lightbox-img {
+  max-height: 85vh !important;
+}
+
+/* Ensure close button is fixed to screen top right */
+.lightbox-btn-close {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  background: rgba(220, 53, 69, 0.9) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 50% !important;
+  padding: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 2050 !important;
+  color: white !important;
+  transition: all 0.2s ease;
+}
+
+.lightbox-btn-close:hover {
+  background: rgba(220, 53, 69, 1) !important;
+  transform: scale(1.1);
+}
+
+/* Navigation buttons styling to make them clearer */
+.lightbox-nav-btn {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 50% !important;
+  padding: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.lightbox-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Make text below image highly visible */
+.lightbox-caption-box {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+  padding: 1rem 1.5rem !important;
+  margin-top: 1rem !important;
+}
+
+.lightbox-caption-box p {
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+}
+
+/* Ensure caption text isn't overridden by global */
+#root .lightbox-caption-box p,
+#root .lightbox-caption-box span {
+  color: #ffffff !important;
+}
+
