@@ -27,7 +27,7 @@ export const companyData = {
   social: {
     instagram: {
       handle: "@poorna_builders__",
-      url: "https://www.instagram.com/poorna_builders_/"
+      url: "https://www.instagram.com/poorna_builders__/"
     },
     googleMaps: {
       url: "https://maps.app.goo.gl/3CAL5ABgyABsRALR8?g_st=iwb"
