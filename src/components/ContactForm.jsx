@@ -63,18 +63,52 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validate()) return;
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    setIsSubmitting(true);
+  if (!validate()) return;
 
-    // Simulate clean immediate processing
-    setTimeout(() => {
+  setIsSubmitting(true);
+
+  try {
+    const formDataToSend = new FormData();
+
+    formDataToSend.append("access_key", "4ef044d8-666f-4e34-95bf-41051607d7c8");
+    formDataToSend.append("subject", "New Project Enquiry - Poorna Builders");
+    formDataToSend.append("from_name", formData.fullName);
+
+    formDataToSend.append("Full Name", formData.fullName);
+    formDataToSend.append("Phone", formData.phone);
+    formDataToSend.append("Email", formData.email || "Not provided");
+    formDataToSend.append("Service Required", formData.serviceRequired);
+    formDataToSend.append(
+      "Project Location",
+      formData.projectLocation || "Not provided"
+    );
+    formDataToSend.append("Project Details", formData.message);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formDataToSend
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 600);
-  };
+    } else {
+      throw new Error(result.message || "Form submission failed");
+    }
+  } catch (error) {
+    console.error("Form submission error:", error);
+    setIsSubmitting(false);
+
+    alert(
+      "Sorry, we could not send your enquiry. Please try again or contact us directly."
+    );
+  }
+};
 
   const handleReset = () => {
     setFormData({
