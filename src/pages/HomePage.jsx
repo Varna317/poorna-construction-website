@@ -33,7 +33,7 @@ export default function HomePage() {
     <>
       <SEOHead
         title="Home"
-        description="Poorna Associates - Engineers & Architects. Poorna Construction Solar delivers integrated civil construction, building works, and renewable solar energy solutions in Tiruchengode, Tamil Nadu."
+        description="Poorna Associates - Engineers & Architects. POORNA ENERGY CONSTRUCTION delivers integrated civil construction, building works, and renewable solar energy solutions in Tiruchengode, Tamil Nadu."
       />
 
       {/* 1. HERO SECTION (Deep Navy, Logo Red Accent, Staggered Entrance) */}
@@ -303,13 +303,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. WHY CHOOSE POORNA CONSTRUCTION SOLAR (Clean White Background) */}
+      {/* 5. WHY CHOOSE POORNA ENERGY CONSTRUCTION (Clean White Background) */}
       <section className="section-py bg-white">
         <div className="container">
           <div className="reveal-on-scroll">
             <SectionHeader
               badge="The Poorna Advantage"
-              title="Why Choose Poorna Construction Solar"
+              title="Why Choose POORNA ENERGY CONSTRUCTION"
               subtitle="Real engineering competence, turnkey responsibility, and certified execution across civil and renewable domains."
             />
           </div>
@@ -480,14 +480,18 @@ export default function HomePage() {
                   </div>
                   <div>
                     <strong className="d-block text-dark">Direct Engineering Lines:</strong>
-                    <div className="d-flex align-items-center gap-2 mt-1">
-                      <a href={`tel:${companyData.phones[0].raw}`} className="text-danger fw-bold text-decoration-none">
-                        {companyData.phones[0].raw}
-                      </a>
-                      <span className="text-muted">·</span>
-                      <a href={`tel:${companyData.phones[1].raw}`} className="text-dark fw-semibold text-decoration-none">
-                        {companyData.phones[1].raw}
-                      </a>
+                    <div className="d-flex flex-wrap align-items-center gap-2 mt-1">
+                      {companyData.phones.map((phone, idx) => (
+                        <React.Fragment key={phone.raw}>
+                          {idx > 0 && <span className="text-muted">·</span>}
+                          <a
+                            href={`tel:${phone.raw}`}
+                            className={idx === 0 ? "text-danger fw-bold text-decoration-none" : "text-dark fw-semibold text-decoration-none"}
+                          >
+                            {phone.raw}
+                          </a>
+                        </React.Fragment>
+                      ))}
                     </div>
                   </div>
                 </div>

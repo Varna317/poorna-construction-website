@@ -23,7 +23,7 @@ export default function AboutPage() {
     <>
       <SEOHead
         title="About Us"
-        description="About Poorna Associates - Engineers & Architects. Poorna Construction Solar operates at the intersection of civil infrastructure and renewable energy in Tiruchengode, Tamil Nadu."
+        description="About Poorna Associates - Engineers & Architects. POORNA ENERGY CONSTRUCTION operates at the intersection of civil infrastructure and renewable energy in Tiruchengode, Tamil Nadu."
       />
 
       {/* Page Header (Deep Navy) */}
@@ -121,7 +121,7 @@ export default function AboutPage() {
                     "{companyData.vision}"
                   </h3>
                   <p className="small text-light mb-0">
-                    POORNA CONSTRUCTION SOLAR — {companyData.positioning.solarReadyTag}
+                    POORNA ENERGY CONSTRUCTION — {companyData.positioning.solarReadyTag}
                   </p>
                 </div>
               </div>

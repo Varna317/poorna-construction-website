@@ -21,7 +21,7 @@ export default function ServicesPage() {
     <>
       <SEOHead
         title="Our Core Services"
-        description="Comprehensive civil construction works, solar energy solutions, and integrated solar-ready construction by Poorna Associates & Poorna Construction Solar in Tiruchengode."
+        description="Comprehensive civil construction works, solar energy solutions, and integrated solar-ready construction by Poorna Associates & POORNA ENERGY CONSTRUCTION in Tiruchengode."
       />
 
       {/* Page Header (Deep Navy) */}

@@ -5,7 +5,7 @@ export default function SEOHead({ title, description }) {
     if (title) {
       document.title = `${title} | Poorna Associates - Engineers & Architects`;
     } else {
-      document.title = "Poorna Associates | Poorna Construction Solar - Civil Works & Renewable Energy";
+      document.title = "Poorna Associates | POORNA ENERGY CONSTRUCTION - Civil Works & Renewable Energy";
     }
 
     if (description) {

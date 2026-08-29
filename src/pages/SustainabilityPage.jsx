@@ -19,7 +19,7 @@ export default function SustainabilityPage() {
     <>
       <SEOHead
         title="Commitment to Sustainability"
-        description="Learn how Poorna Construction Solar integrates renewable energy and civil construction to reduce carbon footprint and advance sustainable infrastructure."
+        description="Learn how POORNA ENERGY CONSTRUCTION integrates renewable energy and civil construction to reduce carbon footprint and advance sustainable infrastructure."
       />
 
       {/* Page Header (Deep Navy) */}
@@ -50,7 +50,7 @@ export default function SustainabilityPage() {
               </h2>
               <blockquote className="p-3 bg-light-poorna border-start border-3 border-danger rounded mb-4">
                 <p className="lead text-dark fw-bold mb-0" style={{ fontSize: '1.1rem' }}>
-                  "At POORNA CONSTRUCTION SOLAR, we believe that development should not come at the cost of the environment."
+                  "At POORNA ENERGY CONSTRUCTION, we believe that development should not come at the cost of the environment."
                 </p>
               </blockquote>
               <p className="text-muted mb-4" style={{ lineHeight: '1.75' }}>

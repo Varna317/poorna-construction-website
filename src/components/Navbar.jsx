@@ -98,21 +98,18 @@ export default function Navbar() {
                 <div className="d-flex flex-column text-start">
                   <span className="header-phone-label">CALL US</span>
                   <div className="header-phone-numbers">
-                    <a
-                      href={`tel:${companyData.phones[0].raw}`}
-                      className="header-phone-link"
-                      title="Call primary line"
-                    >
-                      {companyData.phones[0].raw}
-                    </a>
-                    <span className="header-phone-divider">·</span>
-                    <a
-                      href={`tel:${companyData.phones[1].raw}`}
-                      className="header-phone-link"
-                      title="Call secondary line"
-                    >
-                      {companyData.phones[1].raw}
-                    </a>
+                    {companyData.phones.map((phone, idx) => (
+                      <React.Fragment key={phone.raw}>
+                        {idx > 0 && <span className="header-phone-divider">·</span>}
+                        <a
+                          href={`tel:${phone.raw}`}
+                          className="header-phone-link"
+                          title={`Call ${phone.raw}`}
+                        >
+                          {phone.raw}
+                        </a>
+                      </React.Fragment>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -130,13 +127,12 @@ export default function Navbar() {
             {/* Mobile Contact Quick Actions inside Hamburger */}
             <div className="d-lg-none mt-3 pt-3 border-top border-light-subtle d-flex flex-column gap-2">
               <div className="small text-muted fw-semibold">Direct Enquiries:</div>
-              <div className="d-flex gap-2">
-                <a href={`tel:${companyData.phones[0].raw}`} className="btn btn-sm btn-outline-secondary w-50 py-2">
-                  <PhoneCall size={13} className="me-1 text-danger" /> {companyData.phones[0].raw}
-                </a>
-                <a href={`tel:${companyData.phones[1].raw}`} className="btn btn-sm btn-outline-secondary w-50 py-2">
-                  <PhoneCall size={13} className="me-1 text-danger" /> {companyData.phones[1].raw}
-                </a>
+              <div className="d-flex flex-wrap gap-2">
+                {companyData.phones.map((phone) => (
+                  <a key={phone.raw} href={`tel:${phone.raw}`} className="btn btn-sm btn-outline-secondary flex-grow-1 py-2">
+                    <PhoneCall size={13} className="me-1 text-danger" /> {phone.raw}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

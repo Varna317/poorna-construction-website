@@ -23,7 +23,7 @@ export default function ContactPage() {
     <>
       <SEOHead
         title="Contact Us & Get a Quote"
-        description="Contact Poorna Associates & Poorna Construction Solar in Tiruchengode, Tamil Nadu. Call 9952465692 or 9952765692 for civil construction and solar enquiries."
+        description="Contact Poorna Associates & POORNA ENERGY CONSTRUCTION in Tiruchengode, Tamil Nadu. Call 9952465692, 95141 60808, or 73737 22233 for civil construction and solar enquiries."
       />
 
       {/* Page Header (Deep Navy) */}
@@ -72,7 +72,15 @@ export default function ContactPage() {
                   className="btn btn-poorna-outline d-flex align-items-center justify-content-center gap-2 py-2.5"
                 >
                   <Phone size={16} />
-                  <span>Call Secondary: {companyData.phones[1].display}</span>
+                  <span>Call: {companyData.phones[1].display}</span>
+                </a>
+
+                <a
+                  href={`tel:${companyData.phones[2].raw}`}
+                  className="btn btn-poorna-outline d-flex align-items-center justify-content-center gap-2 py-2.5"
+                >
+                  <Phone size={16} />
+                  <span>Call: {companyData.phones[2].display}</span>
                 </a>
 
                 <a

@@ -32,7 +32,7 @@ export default function SustainabilitySection({ isStandalonePage = false }) {
               Engineering a Greener Future, Today.
             </h2>
             <p className="lead text-dark fw-semibold mb-3">
-              "At POORNA CONSTRUCTION SOLAR, we believe that development should not come at the cost of the environment."
+              "At POORNA ENERGY CONSTRUCTION, we believe that development should not come at the cost of the environment."
             </p>
             <p className="text-muted mb-4">
               As both civil builders and renewable energy practitioners, we design structures from the ground up that are optimized for energy efficiency, longevity, and sustainable energy capture. Choosing Poorna Associates ensures your infrastructure supports long-term ecological balance.

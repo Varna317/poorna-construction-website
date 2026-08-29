@@ -1,14 +1,15 @@
 export const companyData = {
   name: "POORNA ASSOCIATES",
   designation: "ENGINEERS & ARCHITECTS",
-  brand: "POORNA CONSTRUCTION SOLAR",
+  brand: "POORNA ENERGY CONSTRUCTION",
   primaryTagline: "We Construct Dreams",
   secondaryTagline: "Building Today. Powering Tomorrow.",
   logoUrl: "/assets/logo/poorna-logo.jpg",
   
   phones: [
     { display: "+91 99524 65692", raw: "9952465692", isPrimary: true },
-    { display: "+91 99527 65692", raw: "9952765692", isPrimary: false }
+    { display: "+91 95141 60808", raw: "9514160808", isPrimary: false },
+    { display: "+91 73737 22233", raw: "7373722233", isPrimary: false }
   ],
   whatsapp: {
     phone: "9952465692",
@@ -35,7 +36,7 @@ export const companyData = {
   },
 
   positioning: {
-    intro: "POORNA CONSTRUCTION SOLAR is a dynamic and innovative enterprise operating at the intersection of civil infrastructure and renewable energy.",
+    intro: "POORNA ENERGY CONSTRUCTION is a dynamic and innovative enterprise operating at the intersection of civil infrastructure and renewable energy.",
     narrative: "With a deep understanding of the construction landscape and a sharp focus on the future of energy, the company offers a dual-pronged approach to development. We are not just builders; we are energy consultants and sustainability experts. Whether it is a residential complex, a commercial high-rise, or an industrial facility, the goal is to ensure that the structure is not only physically sound but also energy-independent.",
     solarReadyTag: "Engineering a Greener Future, Today."
   },
