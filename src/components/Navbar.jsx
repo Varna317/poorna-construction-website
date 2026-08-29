@@ -41,14 +41,14 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-light py-0">
         <div className="container">
           {/* Logo */}
-          <Link to="/" className="navbar-brand d-flex align-items-center me-3" aria-label="Poorna Associates Home">
+          <Link to="/" className="navbar-brand d-flex align-items-center me-3 py-0" aria-label="Poorna Associates Home">
             <img
               src="/assets/logo/poorna-logo.jpg"
               alt="Poorna Associates - Engineers & Architects Logo"
               style={{
-                height: '75px',
+                height: '84px',
                 width: 'auto',
-                maxWidth: '220px',
+                maxWidth: '240px',
                 objectFit: 'contain',
                 mixBlendMode: 'multiply',
                 filter: 'contrast(1.1) saturate(1.1)',
