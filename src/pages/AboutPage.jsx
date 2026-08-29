@@ -160,6 +160,27 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Founder Section */}
+      <section className="section-py bg-white">
+        <div className="container">
+          <div className="row justify-content-center reveal-on-scroll">
+            <div className="col-lg-8 col-md-10">
+              <div className="poorna-card bg-white text-center p-4 p-md-5">
+                <span className="eyebrow-badge mb-3">Leadership</span>
+                <h2 className="h3 fw-bold text-primary mb-1">Jegananthan.G</h2>
+                <p className="text-danger fw-semibold mb-3" style={{ fontSize: '0.95rem', letterSpacing: '0.03em' }}>
+                  Founder
+                </p>
+                <hr className="mx-auto mb-4" style={{ width: '48px', borderColor: 'var(--color-red)', borderWidth: '2px', opacity: 1 }} />
+                <p className="text-muted mb-0" style={{ lineHeight: '1.75', maxWidth: '600px', margin: '0 auto' }}>
+                  Driven by a vision to build reliable residential and commercial infrastructure along with sustainable energy solutions, Jegananthan.G founded Poorna Energy Construction with a commitment to quality, innovation, and client satisfaction.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Poorna (Clean White Background) */}
       <section className="section-py bg-white">
         <div className="container">
