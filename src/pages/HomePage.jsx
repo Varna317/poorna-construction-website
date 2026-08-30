@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Building2, 
@@ -33,7 +33,7 @@ export default function HomePage() {
     <>
       <SEOHead
         title="Home"
-        description="Poorna Associates - Engineers & Architects. POORNA ENERGY CONSTRUCTION delivers integrated civil construction, building works, and renewable solar energy solutions in Tiruchengode, Tamil Nadu."
+        description="Poorna Associates - Poorna Energy Construction provides residential and commercial building construction, civil engineering, structural works, solar solutions, and renewable energy services in Tiruchengode, Namakkal, Tamil Nadu."
       />
 
       {/* 1. HERO SECTION (Deep Navy, Logo Red Accent, Staggered Entrance) */}
@@ -44,7 +44,7 @@ export default function HomePage() {
             <div className="col-lg-7">
               <div className="hero-anim-1 d-inline-flex align-items-center gap-2 px-3 py-1 rounded bg-white bg-opacity-10 border border-white border-opacity-15 mb-3">
                 <span className="badge bg-danger rounded-sm px-2 py-0.5 small">Civil + Solar</span>
-                <span className="small fw-medium" style={{ color: '#FFFFFF' }}>{companyData.name} • {companyData.designation}</span>
+                <span className="small fw-medium" style={{ color: '#FFFFFF' }}>{companyData.name} â€¢ {companyData.designation}</span>
               </div>
 
               <h1 className="hero-title hero-anim-2">
@@ -483,7 +483,7 @@ export default function HomePage() {
                     <div className="d-flex flex-wrap align-items-center gap-2 mt-1">
                       {companyData.phones.map((phone, idx) => (
                         <React.Fragment key={phone.raw}>
-                          {idx > 0 && <span className="text-muted">·</span>}
+                          {idx > 0 && <span className="text-muted">Â·</span>}
                           <a
                             href={`tel:${phone.raw}`}
                             className={idx === 0 ? "text-danger fw-bold text-decoration-none" : "text-dark fw-semibold text-decoration-none"}
@@ -521,3 +521,4 @@ export default function HomePage() {
     </>
   );
 }
+

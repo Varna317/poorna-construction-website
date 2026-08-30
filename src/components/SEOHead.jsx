@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 
 export default function SEOHead({ title, description }) {
   useEffect(() => {
     if (title) {
-      document.title = `${title} | Poorna Associates - Engineers & Architects`;
+      document.title = `${title} | Poorna Associates - Poorna Energy Construction`;
     } else {
-      document.title = "Poorna Associates | POORNA ENERGY CONSTRUCTION - Civil Works & Renewable Energy";
+      document.title = "Poorna Associates | Poorna Energy Construction - Civil & Commercial Construction, Solar & Renewable Energy";
     }
 
     if (description) {
