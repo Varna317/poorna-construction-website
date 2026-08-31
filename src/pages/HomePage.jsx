@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Building2, 
@@ -44,7 +44,7 @@ export default function HomePage() {
             <div className="col-lg-7">
               <div className="hero-anim-1 d-inline-flex align-items-center gap-2 px-3 py-1 rounded bg-white bg-opacity-10 border border-white border-opacity-15 mb-3">
                 <span className="badge bg-danger rounded-sm px-2 py-0.5 small">Civil + Solar</span>
-                <span className="small fw-medium" style={{ color: '#FFFFFF' }}>{companyData.name} â€¢ {companyData.designation}</span>
+                <span className="small fw-medium" style={{ color: '#FFFFFF' }}>{companyData.name} &ndash; {companyData.designation}</span>
               </div>
 
               <h1 className="hero-title hero-anim-2">
