@@ -201,10 +201,10 @@ export default function HomePage() {
                   <DraftingCompass size={18} />
                   <span>Dual-Pronged Approach</span>
                 </div>
-                <h3 className="h4 fw-bold text-white mb-3">
+                <h3 className="h4 fw-bold text-white mb-3" style={{ color: '#ffffff' }}>
                   Structural Durability + Renewable Generation
                 </h3>
-                <p className="text-light opacity-90 small mb-4" style={{ lineHeight: '1.7' }}>
+                <p className="text-light opacity-90 small mb-4" style={{ lineHeight: '1.7', color: '#f8fafc' }}>
                   By combining structural engineering with renewable energy under one roof, we eliminate contractor friction and ensure buildings are designed to be energy-independent from the foundation up.
                 </p>
 
@@ -214,7 +214,7 @@ export default function HomePage() {
                       <HardHat size={20} />
                     </div>
                     <div>
-                      <strong className="d-block text-white mb-1">Licensed Civil Engineers</strong>
+                      <strong className="d-block text-white mb-1" style={{ color: '#ffffff' }}>Licensed Civil Engineers</strong>
                       <span>Comprehensive structural blueprints, soil analysis, and RCC frame execution.</span>
                     </div>
                   </div>

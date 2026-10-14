@@ -349,6 +349,38 @@
   border-color: #264e7c;
 }
 
+.who-we-are-panel .who-panel-text,
+.who-we-are-panel p:not(.text-danger),
+.who-we-are-panel .text-light,
+.bg-white .who-we-are-panel p:not(.text-danger),
+.bg-white .who-we-are-panel .text-light,
+#root .bg-white .who-we-are-panel p:not(.text-danger),
+#root .bg-white .who-we-are-panel .text-light {
+  color: #f8fafc !important;
+  opacity: 1 !important;
+}
+
+.who-we-are-panel h1:not(.text-danger),
+.who-we-are-panel h2:not(.text-danger),
+.who-we-are-panel h3:not(.text-danger),
+.who-we-are-panel h4:not(.text-danger),
+.who-we-are-panel h5:not(.text-danger),
+.who-we-are-panel h6:not(.text-danger),
+.who-we-are-panel .text-white,
+.bg-white .who-we-are-panel h3:not(.text-danger),
+.bg-white .who-we-are-panel .text-white,
+#root .bg-white .who-we-are-panel h3:not(.text-danger),
+#root .bg-white .who-we-are-panel .text-white {
+  color: #ffffff !important;
+}
+
+.who-we-are-panel .text-danger,
+.who-we-are-panel .text-danger *,
+.bg-white .who-we-are-panel .text-danger,
+.bg-white .who-we-are-panel .text-danger * {
+  color: var(--color-red) !important;
+}
+
 .who-feature-box {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -376,7 +408,13 @@
   flex-shrink: 0;
 }
 
-.who-feature-box strong {
+.who-feature-box strong,
+.who-feature-box strong:not(.text-danger),
+.who-we-are-panel strong:not(.text-danger),
+.bg-white .who-we-are-panel strong:not(.text-danger),
+.bg-white .who-feature-box strong:not(.text-danger),
+#root .bg-white .who-we-are-panel strong:not(.text-danger),
+#root .bg-white .who-feature-box strong:not(.text-danger) {
   color: #ffffff !important;
   font-size: 0.9rem;
   font-weight: 600;
