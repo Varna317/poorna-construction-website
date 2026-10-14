@@ -218,7 +218,7 @@ export default function ContactForm() {
                 className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
                 id="phone"
                 name="phone"
-                placeholder="e.g. 99524 65692"
+                placeholder="e.g. 95141 60808"
                 value={formData.phone}
                 onChange={handleChange}
                 required

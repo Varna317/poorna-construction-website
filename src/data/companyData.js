@@ -7,8 +7,7 @@ export const companyData = {
   logoUrl: "/assets/logo/poorna-logo.jpg",
   
   phones: [
-    { display: "+91 99524 65692", raw: "9952465692", isPrimary: true },
-    { display: "+91 95141 60808", raw: "9514160808", isPrimary: false },
+    { display: "+91 95141 60808", raw: "9514160808", isPrimary: true },
     { display: "+91 73737 22233", raw: "7373722233", isPrimary: false }
   ],
   whatsapp: {
