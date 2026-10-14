@@ -483,7 +483,7 @@ export default function HomePage() {
                     <div className="d-flex flex-wrap align-items-center gap-2 mt-1">
                       {companyData.phones.map((phone, idx) => (
                         <React.Fragment key={phone.raw}>
-                          {idx > 0 && <span className="text-muted">Â·</span>}
+                          {idx > 0 && <span className="text-muted">&middot;</span>}
                           <a
                             href={`tel:${phone.raw}`}
                             className={idx === 0 ? "text-danger fw-bold text-decoration-none" : "text-dark fw-semibold text-decoration-none"}
